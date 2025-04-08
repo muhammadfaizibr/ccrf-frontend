@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Styles from 'assets/styles/OpenPositionsStyles.module.css';
 import PositionCard from 'components/OpenPositionCard';
-import positionsData from 'api/positions.json';
+import positionsData from 'api/positions.js';
 
 const OpenPositions = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -39,7 +39,7 @@ const OpenPositions = () => {
             />
           ))
         ) : (
-          <p className="geologica fw-300">No positions found matching your search.</p>
+          <h5 className="geologica fw-300">No positions found matching your search. <br/> <br/> <a className="geologica fw-300 anchor" href="mailto:becomeamissionary@ccrforce.com?subject=">Looking to reach out?</a></h5>
         )}
       </div>
     </div>

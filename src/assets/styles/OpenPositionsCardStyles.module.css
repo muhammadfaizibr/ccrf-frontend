@@ -4,11 +4,27 @@
   display: flex;
   flex-direction: column;
   gap: var(--gap-l);
-  background: linear-gradient(to bottom, var(--black) 80%, rgb(26, 0, 50));
   align-items: flex-end;
   max-width: 100%;
   height: auto;
+  cursor: pointer;
 }
+
+.technologyBgGradient{
+  background: linear-gradient(to bottom, var(--black) 80%, rgb(26, 0, 50));
+
+}
+
+.administrativeBgGradient{
+  background: linear-gradient(to bottom, var(--black) 80%, rgb(0, 14, 50));
+
+}
+
+.operationalBgGradient{
+  background: linear-gradient(to bottom, var(--black) 80%, rgb(50, 0, 0));
+
+}
+
 
 .contentWrapper {
   display: flex;
@@ -18,12 +34,31 @@
 }
 
 .department {
-  background: linear-gradient(to right, purple, blue);
+  font-size: clamp(1.2rem, 1.8vw, 1.8rem);
+}
+
+.technology {
+  background: linear-gradient(to right, purple, blue 35%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  font-size: clamp(1.2rem, 1.8vw, 1.8rem);
+}
+
+.administrative {
+  background: linear-gradient(to right, cyan, blue 35%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.operational {
+  background: linear-gradient(to right, red, orange 35%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .detailsBtn {

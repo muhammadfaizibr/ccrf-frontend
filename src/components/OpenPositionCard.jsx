@@ -9,10 +9,24 @@ const PositionCard = ({ department, title, shortDescription, detailedDescription
     setShowPopup(!showPopup);
   };
 
+  const getDepartmentClass = (department) => {
+    switch (department) {
+      case "Technology": case "TECHNOLOGY":
+        return {bg: Styles.technologyBgGradient, fg: Styles.technology};
+      case "Administrative": case "ADMINSITRATIVE":
+        return {bg: Styles.administrativeBgGradient, fg: Styles.administrative};
+      case "Operational": case "OPERATIONAL":
+        return {bg: Styles.operationalBgGradient, fg: Styles.operational};
+      default:
+        return "";
+    }
+  }
+
+
   return (
-    <div className={Styles.container}>
+    <div onClick={handlePopupToggle} className={`${Styles.container} ${getDepartmentClass(department).bg}`}>
       <div className={Styles.contentWrapper}>
-        <p className={`${Styles.department} text-uppercase geologica fw-700`}>
+        <p className={`${Styles.department} ${getDepartmentClass(department).fg} text-uppercase geologica fw-700`}>
           {department}
         </p>
         <h4 className="geologica fw-300">{title}</h4>
